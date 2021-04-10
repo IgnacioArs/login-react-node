@@ -1,0 +1,24 @@
+<%- layout('layouts/main.ejs') %>
+<% if(usuarioExiste.length > 0) { %>
+        <div class="alert alert-success" role="alert"> <%= usuarioExiste %> </div>
+<%  } %>
+
+
+
+<div class="row mt-5">
+    <div class="col-md-4 offset-md-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-header">
+                    <h1 class="text-center">Registro</h1>
+                </div>
+                <form action="/registro" method="POST">
+                    <input type="email" name="email" placeholder="ingrese email">
+                    <input type="password" name="password">
+                    <br>
+                    <button type="submit">Registrar</button>
+                </form>     
+            </div>
+        </div>
+    </div>
+</div>
